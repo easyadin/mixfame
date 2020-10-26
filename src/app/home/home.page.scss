@@ -1,27 +1,44 @@
 #container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 #container strong {
-  font-size: 20px;
-  line-height: 26px;
+    font-size: 20px;
+    line-height: 26px;
 }
 
 #container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8c8c8c;
+    margin: 0;
 }
 
 #container a {
-  text-decoration: none;
+    text-decoration: none;
+}
+
+ion-header {
+    ion-title {
+        display: flex;
+        ion-text {
+            color: #000000;
+            &:first-child {
+                font-size: 32px;
+                font-weight: 800;
+                border-right: 1px solid #828282ad;
+                padding-right: 8px;
+            }
+            &:last-child {
+                font-size: 16px;
+                padding-left: 16px;
+                color: #828282;
+            }
+        }
+    }
 }

@@ -1,0 +1,51 @@
+<ion-header class="ion-no-border ion-padding-top">
+    <ion-toolbar>
+        <ion-title>
+            <ion-text>Mixfame </ion-text>
+            <ion-text> Create Account</ion-text>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+        <div class="wrapper">
+            <div class="inner-wrapper ">
+                <ion-item lines="none " class="center_All ">
+                    <ion-label>
+                        <h1><strong>Lets gets to know you</strong></h1>
+                    </ion-label>
+                </ion-item>
+
+                <ion-list class="ion-padding">
+                    <ion-item details="false">
+                        <ion-label position="floating">Full Name</ion-label>
+                        <ion-input type="name" name="name" ngModel #name="ngModel" #name required></ion-input>
+                    </ion-item>
+
+                    <ion-item details="false">
+                        <ion-label position="floating"> Email </ion-label>
+                        <ion-input type="email" name="email" ngModel #email="ngModel" required></ion-input>
+                    </ion-item>
+
+                    <ion-item details="false">
+                        <ion-label position="floating"> Password </ion-label>
+                        <ion-input type="password" name="password" ngModel #password="ngModel" required></ion-input>
+                    </ion-item>
+
+                    <ion-buttons class="center_All ion-padding-top">
+                        <ion-button class="primary_bg" type="submit" [disabled]="!registerForm.valid">Proceed
+                        </ion-button>
+                    </ion-buttons>
+
+                    <!-- login -->
+                    <ion-buttons class="greyOut margin-top center_All">
+                        <ion-button routerLink="/login">Already have an account? Login</ion-button>
+                    </ion-buttons>
+
+                </ion-list>
+            </div>
+        </div>
+    </form>
+
+</ion-content>
